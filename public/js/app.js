@@ -24,12 +24,12 @@ cotacoesForm.addEventListener('submit', (event) => {
                 mainMessage.innerHTML = `Informe um ativo válido`
                 price.innerText = `${data.error.message} | código ${data.error.code}`
             } else {
+                
                 mainMessage.innerText = data.symbol
                 price.innerHTML = data.price
                 price_open.innerHTML = data.price_open
                 day_high.innerHTML = data.day_high
                 day_low.innerHTML = data.day_low
-
             }
         })
     })

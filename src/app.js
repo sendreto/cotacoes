@@ -20,21 +20,18 @@ app.get('', (req, res) => {
         author: 'Sendreto'
     })
 })
-
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'Sobre',
         author: 'Anderson Sendreto'
     })
 })
-
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Ajuda',
         author: 'Anderson Sendreto'
     })
 })
-
 app.get('/cotacoes', (req, res) => {
 
     if (!req.query.ativo) {
@@ -46,7 +43,6 @@ app.get('/cotacoes', (req, res) => {
             }
         })
     }
-
     const symbol = req.query.ativo.toUpperCase()
 
     cotacoes(symbol, (err, body) => {
@@ -62,7 +58,6 @@ app.get('/cotacoes', (req, res) => {
         res.status(200).json(body)
     })
 })
-
 app.get('/help/*', (req, res) => {
 
     res.render('404', {
@@ -71,7 +66,6 @@ app.get('/help/*', (req, res) => {
         author: 'Anderson Sendreto'
     })
 })
-
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
@@ -79,8 +73,7 @@ app.get('*', (req, res) => {
         author: 'Anderson Sendreto'
     })
 })
-
 const port = process.env.PORT || 3000
 app.listen(port, () => {
-console.log(`server is up on port: ${port}`)
+    console.log(`server is up on port: ${port}`)
 })
