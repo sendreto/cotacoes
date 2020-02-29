@@ -19,6 +19,7 @@ const cotacao = (symbol, callback) => {
                 message : `No data found`,
                 code : 404
             }, undefined)
+            return;
         }        
         
         const parsedJSON = response.body.data[0]
