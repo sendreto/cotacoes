@@ -1,6 +1,6 @@
 # Projeto cotações
 
-# App deployed in Heroku -> https://sendreto-cotacoes.herokuapp.com/
+# App deployed in Heroku.
 
 # Aplicativo desenvolvido com nodeJS, Express, comsumindo a API RestFull: https://www.worldtradingdata.com/
 
